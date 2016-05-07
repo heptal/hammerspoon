@@ -495,7 +495,7 @@ function fnutils.split(sString, sSeparator, nMax, bPlain)
   if type(bPlain) ~= "boolean" and type(bPlain) ~= "nil" then
     error("bPlain parameter to hs.fnutils.split must be a boolean, if it is provided", 2) end
 
-  if sSeparator == "" or maxSubStrings == 0 then return { sString } end -- degenerate cases
+  if sSeparator == "" or nMax == 0 then return { sString } end -- degenerate cases
 
   local aRecord = {}
 
