@@ -41,8 +41,9 @@ export HS_MODULES="alert \
     socket \
     sound \
     speech \
-    styledtext \
     task \
+    styledtext \
+    swiftmodule \
     timer \
     uielement \
     urlevent \
