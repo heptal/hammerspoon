@@ -188,6 +188,16 @@ return {setup=function(...)
   hs.help = require("hs.doc")
   help = hs.help
 
+  function hs.swiftloader(mod)
+    local cmod = "hs."..mod..".internal"
+    package.preload[cmod] = function()
+      local dylib = package.searchpath(cmod, package.cpath)
+      local cfunc = "luaopen_"..cmod:gsub("%.","_")
+      local symbol = string.format("_TF%s%s%s%sFGSpVSC9lua_State_Vs5Int32", #mod, mod, #cfunc, cfunc)
+      return package.loadlib(dylib,symbol)()
+    end
+  end
+
   --setup lazy loading
   if autoload_extensions then
     print("-- Lazy extension loading enabled")

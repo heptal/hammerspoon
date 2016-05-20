@@ -17,6 +17,9 @@
 		4C5BA6B71C85EB0400E68CA9 /* test_fs.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BA6B61C85EB0400E68CA9 /* test_fs.lua */; };
 		4C8F8CB31CC38B7E00F72CE5 /* HSuielement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8F8CB21CC38B7E00F72CE5 /* HSuielement.m */; };
 		4C8F8CB51CC38BC500F72CE5 /* test_uielement.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4C8F8CB41CC38BC500F72CE5 /* test_uielement.lua */; };
+		4C9C42A11CE3D3CB00056015 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
+		4C9C42AB1CE3D56E00056015 /* internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C42AA1CE3D56E00056015 /* internal.swift */; };
+		4C9C42AF1CE3D5F500056015 /* swiftdylibBridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C42AE1CE3D5F500056015 /* swiftdylibBridging-Header.h */; };
 		4CB349EF1C7F74AD006F0DE0 /* test_javascript.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4C3D55AD1C7F05D00023B633 /* test_javascript.lua */; };
 		4CB349F11C7F74E5006F0DE0 /* test_osascript.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4CB349F01C7F74E5006F0DE0 /* test_osascript.lua */; };
 		4CB349F31C7F74EE006F0DE0 /* test_applescript.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4CB349F21C7F74EE006F0DE0 /* test_applescript.lua */; };
@@ -240,6 +243,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4C3D55B01C7F0A880023B633;
 			remoteInfo = osascript;
+		};
+		4C9C42B01CE3D62200056015 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9445CA0319083251002568BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C9C429C1CE3D3CB00056015;
+			remoteInfo = swiftdylib;
 		};
 		4CD96BE01C73AC63009FF648 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -725,6 +735,10 @@
 		4C5BA6B61C85EB0400E68CA9 /* test_fs.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test_fs.lua; path = extensions/fs/test_fs.lua; sourceTree = "<group>"; };
 		4C8F8CB21CC38B7E00F72CE5 /* HSuielement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSuielement.m; sourceTree = "<group>"; };
 		4C8F8CB41CC38BC500F72CE5 /* test_uielement.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test_uielement.lua; path = extensions/uielement/test_uielement.lua; sourceTree = "<group>"; };
+		4C9C42A71CE3D3CB00056015 /* libswiftdylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libswiftdylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9C42A91CE3D56E00056015 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = init.lua; sourceTree = "<group>"; };
+		4C9C42AA1CE3D56E00056015 /* internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = internal.swift; sourceTree = "<group>"; };
+		4C9C42AE1CE3D5F500056015 /* swiftdylibBridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "swiftdylibBridging-Header.h"; sourceTree = "<group>"; };
 		4CB349F01C7F74E5006F0DE0 /* test_osascript.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test_osascript.lua; sourceTree = "<group>"; };
 		4CB349F21C7F74EE006F0DE0 /* test_applescript.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test_applescript.lua; sourceTree = "<group>"; };
 		4CBF1C671C91154700B861CE /* libedit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libedit.tbd; path = usr/lib/libedit.tbd; sourceTree = SDKROOT; };
@@ -1041,6 +1055,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3D55B51C7F0A880023B633 /* LuaSkin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C9C42A01CE3D3CB00056015 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9C42A11CE3D3CB00056015 /* LuaSkin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1598,6 +1620,17 @@
 			path = extensions/osascript;
 			sourceTree = "<group>";
 		};
+		4C9C42A81CE3D56E00056015 /* swiftdylib */ = {
+			isa = PBXGroup;
+			children = (
+				4C9C42A91CE3D56E00056015 /* init.lua */,
+				4C9C42AE1CE3D5F500056015 /* swiftdylibBridging-Header.h */,
+				4C9C42AA1CE3D56E00056015 /* internal.swift */,
+			);
+			name = swiftdylib;
+			path = extensions/swiftdylib;
+			sourceTree = "<group>";
+		};
 		4CD203A01C6D75950089706D /* socket */ = {
 			isa = PBXGroup;
 			children = (
@@ -2032,6 +2065,7 @@
 		4F98506D1B722C4100F7E909 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4C9C42A81CE3D56E00056015 /* swiftdylib */,
 				4F6689DF1C2852A100E48AF1 /* _coresetup */,
 				4F64D8BC1B724C3A00FC4C65 /* alert */,
 				4FDE05F71B73568E00E9E8EE /* appfinder */,
@@ -2503,6 +2537,7 @@
 				4CD203B11C6D76E20089706D /* libsocket.dylib */,
 				4CD96BDC1C73ABD2009FF648 /* libsocketudp.dylib */,
 				4F85FED81CCA918D00FBBAD7 /* libdistributednotifications.dylib */,
+				4C9C42A71CE3D3CB00056015 /* libswiftdylib.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2706,6 +2741,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C3D55BF1C7F17150023B633 /* NSAppleEventDescriptor+Parsing.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C9C42A21CE3D3CB00056015 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9C42AF1CE3D5F500056015 /* swiftdylibBridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3187,6 +3230,23 @@
 			name = osascript;
 			productName = alert;
 			productReference = 4C3D55BB1C7F0A880023B633 /* libosascript.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		4C9C429C1CE3D3CB00056015 /* swiftdylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C9C42A41CE3D3CB00056015 /* Build configuration list for PBXNativeTarget "swiftdylib" */;
+			buildPhases = (
+				4C9C429D1CE3D3CB00056015 /* Sources */,
+				4C9C42A01CE3D3CB00056015 /* Frameworks */,
+				4C9C42A21CE3D3CB00056015 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = swiftdylib;
+			productName = alert;
+			productReference = 4C9C42A71CE3D3CB00056015 /* libswiftdylib.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		4CD203A31C6D76E20089706D /* socket */ = {
@@ -4147,6 +4207,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4C9C42B11CE3D62200056015 /* PBXTargetDependency */,
 				4F85FEDB1CCAB22400FBBAD7 /* PBXTargetDependency */,
 				D6477C3F1C5EDA0500F67BBC /* PBXTargetDependency */,
 				D6477C3D1C5EDA0500F67BBC /* PBXTargetDependency */,
@@ -4513,6 +4574,7 @@
 				4FD0AB8C1B74AE1900A82496 /* wifi */,
 				4FD0AB971B74AE2800A82496 /* wifiwatcher */,
 				4FD0ABB11B74AF4E00A82496 /* window */,
+				4C9C429C1CE3D3CB00056015 /* swiftdylib */,
 			);
 		};
 /* End PBXProject section */
@@ -4667,7 +4729,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eux\nrsync -avr \"${BUILT_PRODUCTS_DIR}/LuaSkin.framework\" \"${SRCROOT}\"\nrsync -avr \"${BUILT_PRODUCTS_DIR}/LuaSkin.framework\" \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"";
+			shellScript = "set -eux\nrsync -avr \"${BUILT_PRODUCTS_DIR}/LuaSkin.framework\" \"${SRCROOT}\"\nrsync -avr \"${BUILT_PRODUCTS_DIR}/LuaSkin.framework\" \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nrsync -avr \"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/libswiftAppKit.dylib\" \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"";
 		};
 		4FBE2D161B7268DF00407788 /* Copy extensions to bundle */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4735,6 +4797,14 @@
 			files = (
 				4C3D55C01C7F171E0023B633 /* NSAppleEventDescriptor+Parsing.m in Sources */,
 				4C3D55BC1C7F0AA90023B633 /* internal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C9C429D1CE3D3CB00056015 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9C42AB1CE3D56E00056015 /* internal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5320,6 +5390,11 @@
 			target = 4C3D55B01C7F0A880023B633 /* osascript */;
 			targetProxy = 4C3D55BD1C7F0B730023B633 /* PBXContainerItemProxy */;
 		};
+		4C9C42B11CE3D62200056015 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C9C429C1CE3D3CB00056015 /* swiftdylib */;
+			targetProxy = 4C9C42B01CE3D62200056015 /* PBXContainerItemProxy */;
+		};
 		4CD96BE11C73AC63009FF648 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CD96BD21C73ABD2009FF648 /* socketudp */;
@@ -5779,6 +5854,160 @@
 				GCC_WARN_UNUSED_VALUE = "$(inherited)";
 				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		4C9C42A51CE3D3CB00056015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		4C9C42A61CE3D3CB00056015 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -13405,6 +13634,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hammerspoon/Hammerspoon-Prefix.pch";
 				INFOPLIST_FILE = "Hammerspoon/Hammerspoon-Info.plist";
@@ -13429,6 +13659,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hammerspoon/Hammerspoon-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -14867,6 +15098,15 @@
 			buildConfigurations = (
 				4C3D55B91C7F0A880023B633 /* Debug */,
 				4C3D55BA1C7F0A880023B633 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4C9C42A41CE3D3CB00056015 /* Build configuration list for PBXNativeTarget "swiftdylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C9C42A51CE3D3CB00056015 /* Debug */,
+				4C9C42A61CE3D3CB00056015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

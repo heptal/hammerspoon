@@ -359,6 +359,7 @@ NSString *specMaskToString(int spec);
  @param firstArg - An integer that defines the first acceptable Lua argument type. Possible values are LS_TNIL, LS_TBOOLEAN, LS_TNUMBER, LS_TSTRING, LS_TTABLE, LS_TFUNCTION, LS_TUSERDATA, LS_TBREAK. Followed by zero or more integers of the same possible values. The final value MUST be LS_TBREAK
  */
 - (void)checkArgs:(int)firstArg, ...;
+- (void)checkArgs:(int)firstArg args:(va_list)args;
 
 #pragma mark - Conversion from NSObjects into Lua objects
 

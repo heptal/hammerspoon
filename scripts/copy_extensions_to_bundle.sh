@@ -42,6 +42,7 @@ export HS_MODULES="alert \
     sound \
     speech \
     styledtext \
+    swiftdylib \
     task \
     timer \
     uielement \

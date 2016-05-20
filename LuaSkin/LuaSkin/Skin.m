@@ -422,6 +422,12 @@ nextarg:
     }
 }
 
+- (void)checkArgs:(int)firstArg args:(va_list)arguments {
+//    va_list arguments;
+//    va_arg(firstArg, arguments);
+    [self checkArgs:firstArg, &arguments];
+}
+
 #pragma mark - Conversion from NSObjects into Lua objects
 
 - (int)pushNSObject:(id)obj { return [self pushNSObject:obj withOptions:LS_NSNone] ; }
